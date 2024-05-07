@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGUI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="https://pngimg.com/uploads/ibm/ibm_PNG19655.png" alt="IBM Logo" class="logo" onclick="openLink('https://www.ibm.com/in-en')">
+
+    <div class="alignment">
+        <h1>Netcool WebGUI</h1>
+    </div>
+
+    <div class="alignment">
+        <img src="https://static.wixstatic.com/media/e33607_9505352ee88b44bcbe1d2392910a269b~mv1.jpg/v1/fill/w_539,h_342,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/e33607_9505352ee88b44bcbe1d2392910a269b~mv1.jpg" class="gui" alt="Netcool WebGUI"/>
+    </div>
+
+
+
+    <div class="container">
+        <!-- Fourth group of containers -->
+        <div class="group">
+            
+            <div class="column" id="web_gui">
+                <div class="specs">
+                    <h3>Deployment Specifications</h3>
+                    <ul>
+                        <li><label>Version:</label> <input type="text" id="version" value=""> </li>
+                        <li><label>Number of JazzSM DASH (WebGUI) Instances:</label> <input type="text" id="dash_instances" value=""></li>
+                        <li><label>High Availability:</label> <select id="high_availability">
+                            <option value="Load Balancing">Load Balancing</option>
+                            <option value="Standalone">Standalone</option>
+                        </select></li>
+                        <li><label>Console Integration with Netcool Impact:</label> <select id="console_integration">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select></li>
+                        <li><label>JazzSM shared with ITNM & IOALA:</label> <select id="shared_with_itnm_ioala">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select></li>
+                        <li><label>Integration with Cognos Reporting:</label> <select id="cognos_integration">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select></li>
+                    </ul>
+                </div>
+                <div class="kpi">
+                    <h3>Key Performance Indicators</h3>
+                    <ul>
+                        <li><label>Integrated with LDAP:</label> <select id="integrated_with_ldap">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select></li>
+                        <li><label>Number of DASH Views:</label> <input type="text" id="dash_views" value=""></li>
+                        <li><label>Number of WebGUI Filters:</label> <input type="text" id="webgui_filters" value=""></li>
+                        <li><label>Number of WebGUI Views:</label> <input type="text" id="webgui_views" value=""></li>
+                        <li><label>Number of WebGUI Users assigned Roles to login to WebGUI:</label> <input type="text" id="webgui_users_roles" value=""></li>
+                        <li><label>DataProvider Connection with Netcool Impact:</label> <select id="data_provider_connection">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select></li>
+                        <li><label>Number of WEBGUI Tool & prompts:</label> 
+                            Default: <input type="text" id="default_tool_prompt" value="">
+                            Custom: <input type="text" id="custom_tool_prompt" value="">
+                        </li>
+                        <li><label>JVM parameters for WebGUI:</label> 
+                            <ul>
+                                <li><label>-Xms:</label> <input type="text" id="xms" value=""></li>
+                                <li><label>-Xmx:</label> <input type="text" id="xmx" value=""></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="submitButton" class="submit-button">Submit</button>
+    <div id="report" class="report"></div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 IBM. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
